@@ -1,0 +1,427 @@
+// /api/getspec
+[
+    {
+        "id": 1,
+        "category": "body",
+        "name": "Thân máy",
+        "spec": {
+            "brand": {
+                "name": "Thương hiệu",
+                "input": "text",
+                "filtre": "radio",
+                "hasMany": false,
+                "value": {
+                    "Canon": "Canon",
+                    "Nikon": "Nikon",
+                    "Sony": "Sony",
+                    "Fujifilm": "Fujifilm",
+                    "Hasselblad": "Hasselblad",
+                    "Leica": "Leica",
+                    "Olympus": "Olympus"
+                }
+            },
+            "type": {
+                "name": "Kiểu máy",
+                "input": "radio",
+                "filtre": "checkbox",
+                "hasMany": false,
+                "value": {
+                    "dslr": "DSLR",
+                    "mrl": "Mirrorless",
+                    "cine": "Máy quay chuyên dụng"
+                }
+            },
+            "sensor": {
+                "name": "Kích thước cảm biến",
+                "input": "radio",
+                "filtre": "checkbox",
+                "hasMany": false,
+                "value": {
+                    "med": "Medium Format",
+                    "ff": "FullFrame",
+                    "apsc": "Crop",
+                    "m43": "Micro Four Third",
+                    "cine": "Cine"
+                }
+            }
+        }
+    },
+    {
+        "id": 2,
+        "category": "lens",
+        "name": "Ống kính",
+        "spec": {
+            "brand": {
+                "name": "Thương hiệu",
+                "input": "text",
+                "filtre": "radio",
+                "hasMany": false,
+                "value": {
+                    "Canon": "Canon",
+                    "Nikon": "Nikon",
+                    "Sony": "Sony",
+                    "Fujifilm": "Fujifilm",
+                    "Sigma": "Sigma",
+                    "Tamron": "Tamron"
+                }
+            },
+            "body": {
+                "name": "Loại thân máy",
+                "input": "radio",
+                "filtre": "checkbox",
+                "hasMany": false,
+                "value": {
+                    "dslr": "DSLR",
+                    "mrl": "Mirrorless",
+                    "cine": "Máy quay chuyên dụng"
+                }
+            },
+            "sensor": {
+                "name": "Kích thước cảm biến",
+                "input": "radio",
+                "filtre": "checkbox",
+                "hasMany": false,
+                "value": {
+                    "med": "Medium Format",
+                    "ff": "FullFrame",
+                    "apsc": "Crop",
+                    "m43": "Micro Four Third",
+                    "cine": "Cine"
+                }
+            },
+            "purpose": {
+                "name": "Mục đích sử dụng",
+                "input": "checkbox",
+                "filtre": "checkbox",
+                "hasMany": true,
+                "value": {
+                    "fix": "Đơn tiêu cự",
+                    "tele": "Chụp Tele",
+                    "general": "Đa dụng",
+                    "wide": "Chụp phong cảnh",
+                    "macro": "Chụp Macro",
+                    "portrait": "Chụp chân dung",
+                    "fisheye": "Lens mắt cá",
+                    "cine": "Lens máy quay",
+                    "tshift": "Ống kính T-shift",
+                    "extender": "Extender - Converter"
+                }
+            }
+        }
+    },
+    {
+        "id": 3,
+        "category": "flash",
+        "name": "Đèn Flash",
+        "spec": {
+            "brand": {
+                "name": "Thương hiệu",
+                "input": "text",
+                "filtre": "radio",
+                "hasMany": false,
+                "value": {
+                    "Canon": "Canon",
+                    "Nikon": "Nikon",
+                    "Sony": "Sony",
+                    "Godox": "Godox"
+                }
+            },
+            "body": {
+                "name": "Loại thân máy",
+                "input": "radio",
+                "filtre": "checkbox",
+                "hasMany": false,
+                "value": {
+                    "Canon": "Canon",
+                    "Nikon": "Nikon",
+                    "Sony": "Sony"
+                }
+            },
+            "power": {
+                "name": "Công suất",
+                "input": "radio",
+                "filtre": "checkbox",
+                "hasMany": false,
+                "value": {}
+            }
+        }
+    }
+]
+
+
+
+
+{
+    "brand": {
+        "name": "Thương hiệu",
+        "input": "text",
+        "filtre": "radio",
+        "hasMany": false,
+        "value": {
+            "Canon": "Canon",
+            "Nikon": "Nikon",
+            "Sony": "Sony",
+            "Fujifilm": "Fujifilm",
+            "Hasselblad": "Hasselblad",
+            "Leica": "Leica",
+            "Olympus": "Olympus"
+        }
+    },
+    "type": {
+        "name": "Kiểu máy",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {
+            "dslr": "DSLR",
+            "mrl": "Mirrorless",
+            "cine": "Máy quay chuyên dụng"
+        }
+    },
+    "sensor": {
+        "name": "Kích thước cảm biến",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {
+            "med": "Medium Format",
+            "ff": "FullFrame",
+            "apsc": "Crop",
+            "m43": "Micro Four Third",
+            "cine": "Cine"
+        }
+    }
+}
+{
+    "brand": {
+        "name": "Thương hiệu",
+        "input": "text",
+        "filtre": "radio",
+        "hasMany": false,
+        "value": {
+            "Canon": "Canon",
+            "Nikon": "Nikon",
+            "Sony": "Sony",
+            "Fujifilm": "Fujifilm",
+            "Hasselblad": "Hasselblad",
+            "Leica": "Leica",
+            "Olympus": "Olympus"
+        }
+    },
+    "type": {
+        "name": "Kiểu máy",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {
+            "dslr": "DSLR",
+            "mrl": "Mirrorless",
+            "cine": "Máy quay chuyên dụng"
+        }
+    },
+    "sensor": {
+        "name": "Kích thước cảm biến",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {
+            "med": "Medium Format",
+            "ff": "FullFrame",
+            "apsc": "Crop",
+            "m43": "Micro Four Third",
+            "cine": "Cine"
+        }
+    }
+}
+
+{
+    "brand": {
+        "name": "Thương hiệu",
+        "input": "text",
+        "filtre": "radio",
+        "hasMany": false,
+        "value": {
+            "Canon": "Canon",
+            "Nikon": "Nikon",
+            "Sony": "Sony",
+            "Fujifilm": "Fujifilm",
+            "Hasselblad": "Hasselblad",
+            "Leica": "Leica",
+            "Olympus": "Olympus"
+        }
+    },
+    "type": {
+        "name": "Kiểu máy",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {
+            "dslr": "DSLR",
+            "mrl": "Mirrorless",
+            "cine": "Máy quay chuyên dụng"
+        }
+    },
+    "sensor": {
+        "name": "Kích thước cảm biến",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {
+            "med": "Medium Format",
+            "ff": "FullFrame",
+            "apsc": "Crop",
+            "m43": "Micro Four Third",
+            "cine": "Cine"
+        }
+    }
+}
+
+{
+    "brand": {
+        "name": "Thương hiệu",
+        "input": "text",
+        "filtre": "radio",
+        "hasMany": false,
+        "value": {
+            "Canon": "Canon",
+            "Nikon": "Nikon",
+            "Sony": "Sony",
+            "Fujifilm": "Fujifilm",
+            "Sigma": "Sigma",
+            "Tamron": "Tamron"
+        }
+    },
+    "body": {
+        "name": "Loại thân máy",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {
+            "dslr": "DSLR",
+            "mrl": "Mirrorless",
+            "cine": "Máy quay chuyên dụng"
+        }
+    },
+    "sensor": {
+        "name": "Kích thước cảm biến",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {
+            "med": "Medium Format",
+            "ff": "FullFrame",
+            "apsc": "Crop",
+            "m43": "Micro Four Third",
+            "cine": "Cine"
+        }
+    },
+    "purpose": {
+        "name": "Mục đích sử dụng",
+        "input": "checkbox",
+        "filtre": "checkbox",
+        "hasMany": true,
+        "value": {
+            "fix": "Đơn tiêu cự",
+            "tele": "Chụp Tele",
+            "general": "Đa dụng",
+            "wide": "Chụp phong cảnh",
+            "macro": "Chụp Macro",
+            "portrait": "Chụp chân dung",
+            "fisheye": "Lens mắt cá",
+            "cine": "Lens máy quay",
+            "tshift": "Ống kính T-shift",
+            "extender": "Extender - Converter"
+        }
+    }
+}
+{
+    "brand": {
+        "name": "Thương hiệu",
+        "input": "text",
+        "filtre": "radio",
+        "hasMany": false,
+        "value": {
+            "Canon": "Canon",
+            "Nikon": "Nikon",
+            "Sony": "Sony",
+            "Fujifilm": "Fujifilm",
+            "Sigma": "Sigma",
+            "Tamron": "Tamron"
+        }
+    },
+    "body": {
+        "name": "Loại thân máy",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {
+            "dslr": "DSLR",
+            "mrl": "Mirrorless",
+            "cine": "Máy quay chuyên dụng"
+        }
+    },
+    "sensor": {
+        "name": "Kích thước cảm biến",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {
+            "med": "Medium Format",
+            "ff": "FullFrame",
+            "apsc": "Crop",
+            "m43": "Micro Four Third",
+            "cine": "Cine"
+        }
+    },
+    "purpose": {
+        "name": "Mục đích sử dụng",
+        "input": "checkbox",
+        "filtre": "checkbox",
+        "hasMany": true,
+        "value": {
+            "fix": "Đơn tiêu cự",
+            "tele": "Chụp Tele",
+            "general": "Đa dụng",
+            "wide": "Chụp phong cảnh",
+            "macro": "Chụp Macro",
+            "portrait": "Chụp chân dung",
+            "fisheye": "Lens mắt cá",
+            "cine": "Lens máy quay",
+            "tshift": "Ống kính T-shift",
+            "extender": "Extender - Converter"
+        }
+    }
+}
+
+{
+    "brand": {
+        "name": "Thương hiệu",
+        "input": "text",
+        "filtre": "radio",
+        "hasMany": false,
+        "value": {
+            "Canon": "Canon",
+            "Nikon": "Nikon",
+            "Sony": "Sony",
+            "Godox": "Godox"
+        }
+    },
+    "body": {
+        "name": "Loại thân máy",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {
+            "Canon": "Canon",
+            "Nikon": "Nikon",
+            "Sony": "Sony"
+        }
+    },
+    "power": {
+        "name": "Công suất",
+        "input": "radio",
+        "filtre": "checkbox",
+        "hasMany": false,
+        "value": {}
+    }
+}
